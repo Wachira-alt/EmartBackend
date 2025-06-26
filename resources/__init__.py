@@ -3,7 +3,7 @@ from flask import Blueprint
 from .auth import RegisterResource, LoginResource, ProfileResource
 from .products import ProductListResource, ProductDetailResource
 from .cart_items import CartItemListResource, CartItemDetailResource
-from .orders import CheckoutResource, AdminOrderListResource, AdminOrderCancelResource, AdminOrderStatusResource, UserOrdersResource
+from .order import CheckoutResource, AdminOrderListResource, AdminOrderCancelResource, AdminOrderStatusResource, UserOrdersResource
 from resources.users import AdminUserListResource, PromoteUserResource, DeleteUserResource
 
 api_bp = Blueprint("api", __name__)
