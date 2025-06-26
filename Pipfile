@@ -14,6 +14,7 @@ flask-restful = "*"
 sqlalchemy-serializer = "*"
 flask-jwt-extended = "*"
 pyjwt = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 
