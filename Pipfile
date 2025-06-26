@@ -13,6 +13,7 @@ flask-cors = "*"
 flask-restful = "*"
 sqlalchemy-serializer = "*"
 flask-jwt-extended = "*"
+pyjwt = "*"
 
 [dev-packages]
 
