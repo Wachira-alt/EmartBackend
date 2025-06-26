@@ -14,7 +14,7 @@ class CartItem(db.Model, SerializerMixin):
     user = db.relationship("User", back_populates="cart_items")
     product = db.relationship("Product", back_populates="cart_items")
 
-    # serialize_rules = ('-user.cart_items', '-product.cart_items' ...,)
+    # serialize_rules = ('-user.cart_items', '-product.cart_items' ....,)
     serialize_rules = ('-user', 'product',)
 
 
