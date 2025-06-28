@@ -1,6 +1,7 @@
 from extensions import db, bcrypt
 from sqlalchemy.orm import validates
 from sqlalchemy_serializer import SerializerMixin
+import re
 
 class User(db.Model, SerializerMixin):
     __tablename__ = 'users'
@@ -31,7 +32,8 @@ class User(db.Model, SerializerMixin):
 
     @validates("email")
     def validate_email(self, key, value):
-        import re
+        if not isinstance(value, str):
+            raise ValueError("Email must be a string.")
         if not re.match(r"[^@]+@[^@]+\.[^@]+", value):
-            raise ValueError("Invalid email format")
+            raise ValueError("Invalid email format.")
         return value
