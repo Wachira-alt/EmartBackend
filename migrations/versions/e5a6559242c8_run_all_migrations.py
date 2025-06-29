@@ -1,8 +1,8 @@
-"""Initial migration with User, Product, CartItem, Order, OrderItem
+"""run all migrations
 
-Revision ID: cb2d19bb18e2
+Revision ID: e5a6559242c8
 Revises: 
-Create Date: 2025-06-26 11:28:49.490471
+Create Date: 2025-06-29 19:26:28.872341
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'cb2d19bb18e2'
+revision = 'e5a6559242c8'
 down_revision = None
 branch_labels = None
 depends_on = None
